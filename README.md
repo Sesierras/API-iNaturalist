@@ -5,3 +5,7 @@ This Inaturalist API project is an application based on MongoDB and Express.js, 
 
 # Backlog 
 https://trello.com/b/UHMRHGFT/api
+
+
+# API reference from iNaturalist
+https://www.inaturalist.org/pages/api+reference
