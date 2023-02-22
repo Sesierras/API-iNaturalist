@@ -1,0 +1,31 @@
+{
+  "name": "api-inaturalist",
+  "version": "1.0.0",
+  "description": "This Inaturalist API project is an application based on MongoDB and Express.js, designed to provide an easy-to-use interface for users to browse the Inaturalist database and quickly query data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sesierras/API-iNaturalist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sesierras/API-iNaturalist/issues"
+  },
+  "homepage": "https://github.com/Sesierras/API-iNaturalist#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

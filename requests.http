@@ -1,0 +1,47 @@
+###
+POST http://localhost:9100/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+"id": "944210",
+"occurrenceID": "https://www.example.org/observations/90210",
+"basisOfRecord": "MachineObservation",
+"modified": "2023-02-22T08:30:00Z",
+"institutionCode": "ExampleOrg",
+"collectionCode": "Observations",
+"datasetName": "ExampleOrg observation dataset",
+"catalogNumber": "90210",
+"references": "https://www.example.org/observations/90210",
+"recordedBy": "exampleuser",
+"identifiedBy": "exampleuser",
+"captive": "wild",
+"eventDate": "2023-02-21T18:15:30-08:00",
+"eventTime": "18:15:30-08:00",
+"verbatimEventDate": "February 21, 2023 6:15:30 PM PST",
+"verbatimLocality": "123 Example St, San Francisco, CA, US",
+"decimalLatitude": "37.7749",
+"decimalLongitude": "-122.4194",
+"coordinateUncertaintyInMeters": "10",
+"geodeticDatum": "EPSG:4326",
+"countryCode": "US",
+"stateProvince": "California",
+"identificationID": "987654321",
+"dateIdentified": "2023-02-22T08:30:00Z",
+"taxonID": "12345",
+"scientificName": "Exampleus species",
+"taxonRank": "species",
+"kingdom": "Animalia",
+"phylum": "Chordata",
+"class": "Mammalia",
+"order": "Carnivora",
+"family": "Felidae",
+"genus": "Exampleus",
+"license": "https://creativecommons.org/licenses/by/4.0/",
+"rightsHolder": "ExampleOrg",
+"exampleField1": "example value 1",
+"exampleField2": "example value 2"
+}
+
+###
+GET http://localhost:9100/api/users HTTP/1.1
+
