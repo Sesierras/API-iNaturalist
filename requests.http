@@ -43,5 +43,14 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:9100/api/users HTTP/1.1
+GET http://localhost:9100/api/users/ HTTP/1.1
+
+###
+GET http://localhost:9100/api/users/id/63f55981c86421eeb7d7b93f HTTP/1.1
+
+###
+GET http://localhost:9100/api/users/countryCode/AU HTTP/1.1
+
+###
+GET http://localhost:9100/api/users/catalogNumber/130191363 HTTP/1.1
 
