@@ -1,6 +1,3 @@
 {
-	"editor.tabCompletion": "on",
-	"diffEditor.codeLens": true,
-	"commentTranslate.targetLanguage": "en",
-	"commentTranslate.source": "Google"
+	"editor.tabCompletion": "on"
 }

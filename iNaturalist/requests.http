@@ -59,7 +59,7 @@ Content-Type: application/json
 
 {
   "occurrenceID": "https://www.example.org/observations/90210",
-  "basisOfRecord": "Vale",
+  "basisOfRecord": "Val",
   "modified": "2023-02-22T08:30:00.000Z",
   "institutionCode": "ExampleOrg",
   "collectionCode": "Observations",
@@ -98,4 +98,4 @@ Content-Type: application/json
 
 
 ###
-DELETE  http://localhost:9100/api/users/id/63f80a6922aa97933170b89d HTTP/1.1
+DELETE  http://localhost:9100/api/users/id/63f80a6921aa97933170b89d HTTP/1.1
