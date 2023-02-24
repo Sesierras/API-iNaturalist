@@ -55,9 +55,11 @@ The API reference for the iNaturalist API can be found on the official iNaturali
 
 In this case, the schema defines an object that should contain 36 fields, such as id, occurrence ID, record base, modified, institution code, collection code, dataset name, catalog number, references, registered by , identified by, captive, eventDate, eventTime, verbatimEventDate, verbatimLocality, decimalLatitude, decimal longitude, coordinate uncertainty in meters, geodetic datum, country code, state province, identification ID, identification date, taxon ID, scientific name, taxon rank, kingdom, phylum, class, order, family, genus, license, rights holder, example field1, example field2. Below is the Json in detail:
 
-```json
-{
-   id: {
+```javascript
+
+
+   ({
+  id: {
     type: String,
     required: true
   },
@@ -203,7 +205,9 @@ In this case, the schema defines an object that should contain 36 fields, such a
   exampleField2: {
     type: String
   }
+})
 
+ 
 ```
 ### Endpoints
 
