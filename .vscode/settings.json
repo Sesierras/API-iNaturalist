@@ -1,3 +1,5 @@
 {
-	"editor.tabCompletion": "on"
+	"editor.tabCompletion": "on",
+	"commentTranslate.targetLanguage": "en",
+	"diffEditor.codeLens": true
 }
