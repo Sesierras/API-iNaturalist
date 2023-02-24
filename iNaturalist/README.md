@@ -5,7 +5,13 @@
 <h1 style="color:#68D1E7;font-size:40px;text-align:center; ></h1>
 <h1 align="center"> API-iNaturalistic</h1>
 
-API-iNaturalist is a RESTful API that provides access to data from the Inaturalist database. The application is built on MongoDB and Express.js and is designed to provide an easy-to-use interface for users to browse the Inaturalist database and quickly query data. As is well known, both the database and the idea itself are absolutely inspired by [iNaturalist](https://www.inaturalist.org/pages/api+reference).
+
+
+[![](https://img.shields.io/badge/_VIEW_DEPLOY-%233330.svg?style=for-the-badge&logo=Render)](https://sesierras.github.io)
+
+
+API-iNaturalist is a RESTful API that provides access to data from the Inaturalist database. The application is built on MongoDB and Express.js and is designed to provide an easy-to-use interface for users to browse the Inaturalist database and quickly query data. As is well known, both the database and the idea itself are absolutely inspired by [iNaturalist](https://api-inaturalist.onrender.com).
+
 
 ## Getting Started
 To get started with the API, you will need to have Node.js and MongoDB installed on your system. Once you have these installed, you can clone the repository and install the dependencies (see more in [Installation](#instalation)).
@@ -17,9 +23,9 @@ To get started with the API, you will need to have Node.js and MongoDB installed
 - [Installation](#installation)
 - [API Reference](#api-reference)
 - [Data schema](#data-schema)
-	- [Endpoints](#endpoints)
-	- [Contributing](#contributing)
-	- [License](#license)
+  - [Endpoints](#endpoints)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ____________________
 
@@ -223,3 +229,5 @@ API-iNaturalist Clone is licensed under _GNU General Public License v3.0_
 
 ![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/sesierras/)
+
+[![](https://img.shields.io/badge/_♥_-%233330.svg?style=for-the-badge&logo=GITHUB)](https://sesierras.github.io)
