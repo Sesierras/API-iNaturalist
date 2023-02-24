@@ -21,7 +21,7 @@ router.post("/users/", (req, res) => {
     );
 	});
 
-  /*<<Get an specific number of observations>>*/
+  /*<<Get an specific number of observations sort by data>>*/
   router.get("/users", async (req, res) => {
     try {
       const data = await userSchema
@@ -35,7 +35,7 @@ router.post("/users/", (req, res) => {
   }
 });
 
-/*<<Get an specific number of observations>>*/
+/*<<Get an specific number of observations by ID>>*/
 router.get("/users/id/:id", (req, res) => {
   const {id}= req.params;
   userSchema
@@ -44,7 +44,7 @@ router.get("/users/id/:id", (req, res) => {
   .catch((err) => res.status(404).json({ message: "Observation not found"}))
 });
 
-
+/*<<Get an specific number of observations sort by catalogNumber >>*/
 router.get("/users/catalogNumber/:catalogNumber", (req, res) => {
   const { catalogNumber } = req.params;
   userSchema
@@ -55,8 +55,7 @@ router.get("/users/catalogNumber/:catalogNumber", (req, res) => {
     )
     .catch((err) => res.status(404).json({ message: "Observation not found" }));
 });
-/*<<Update an observation>>*/
-
+/*<<Get an specific number of observations sort by countryCode >>*/
 router.get("/users/countryCode/:countryCode", async (req, res) => {
   try {
     const data = await userSchema
@@ -65,7 +64,7 @@ router.get("/users/countryCode/:countryCode", async (req, res) => {
       .sort({ date: -1 }); // sort the observations by date in descending order
 
     if (data.length === 0) {
-      // Si no se encontró ninguna observación con ese countryCode, devuelve un error 404
+      //If no observation with that countryCode was found, return a 404 error
       return res
         .status(404)
         .json({ message: "No observations found in this Country" });
@@ -78,5 +77,48 @@ router.get("/users/countryCode/:countryCode", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error retrieving observations" });
+  }
+});
+
+/*<<Update an specific observations filter by ID>>*/
+router.put("/users/id/:id", async (req, res) => {
+  try {
+    const filter = { _id: req.params.id };
+    const update = { $set: req.body };
+    const options = { new: true };
+
+    const data = await userSchema.findOneAndUpdate(filter, update, options);
+
+    if (!data) {
+      return res
+        .status(404)
+        .json({ message: "No observations found by this ID" });
+    }
+
+    console.log(`✅ Observations in ${req.params.id} updated in MongoDB-Atlas`);
+    res.json(data); //Send response with updated data
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error updating observations" });
+  }
+});
+
+/*<<Delete a specific observation filter by ID>>*/
+router.delete("/users/id/:id", async (req, res) => {
+  try {
+    const filter = { _id: req.params.id }; // filter by ID to delete a specific observation
+    const result = await userSchema.deleteOne(filter);
+console.log(result);
+    if (result.deletedCount === 0) {
+      return res
+        .status(404)
+        .json({ message: "No observations found by this ID" });
+    }
+
+    console.log(`✅ Observation ${req.params.id} deleted in MongoDB-Atlas`);
+    res.json({ message: "Observation deleted" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error deleting observation" });
   }
 });
